@@ -14,7 +14,18 @@ addForm.addEventListener('submit',function(e){
   e.preventDefault();
   const value = addForm.querySelector('input[type="text"]').value;
   console.log(value);
-  
+
+// hide books
+const hideBox = document.querySelector('#hide');
+hideBox.addEventListener('change', function(e){
+  if(hideBox.checked){
+    list.style.display = "none";
+  } else {
+    list.style.display = "initial";
+  }
+});
+
+
   
 // create elements
 const li = document.createElement('li');
@@ -29,6 +40,7 @@ bookName.textContent = 'value';
 // add classes
 bookName.classList.add('name');
 deleteBtn.classList.add('delete');
+
 
 
 // append to document 
